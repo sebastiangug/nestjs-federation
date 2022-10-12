@@ -5,10 +5,8 @@ import { ApolloGatewayDriver, ApolloGatewayDriverConfig } from '@nestjs/apollo';
 import { ApolloDriverConfig } from '@nestjs/apollo';
 import { RootResolver } from './resolvers/root.resolver';
 
-
 @Module({
   imports: [
-
     GraphQLModule.forRootAsync<ApolloGatewayDriverConfig>({
       driver: ApolloGatewayDriver,
       imports: [],
@@ -22,7 +20,7 @@ import { RootResolver } from './resolvers/root.resolver';
           sortSchema: true,
           introspection: true,
         };
-        const origins = "*"
+        const origins = '*';
         server.cors = { origin: origins, credentials: true };
         server.path = '/apis/gateway/graphql';
 
@@ -47,7 +45,6 @@ import { RootResolver } from './resolvers/root.resolver';
           gateway: {
             supergraphSdl: new IntrospectAndCompose({
               subgraphHealthCheck: true,
-
               subgraphs: [
                 {
                   name: 'user',
@@ -64,7 +61,6 @@ import { RootResolver } from './resolvers/root.resolver';
         };
       },
     }),
-
   ],
   controllers: [],
   providers: [RootResolver],
