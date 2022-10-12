@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "gateway": "apps/gateway",
+    "auth-service": "apps/auth-service",
+    "user-service": "apps/user-service"
+  }
+}

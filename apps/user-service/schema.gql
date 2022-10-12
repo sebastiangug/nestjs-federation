@@ -1,0 +1,13 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""status response"""
+type HealthResponse {
+  service: String!
+  status: String!
+}
+
+type Query {
+  getUserServiceHealth: HealthResponse!
+}

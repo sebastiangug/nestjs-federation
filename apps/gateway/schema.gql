@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+enum GraphqlServicesEnum {
+  AUTH_SERVICE
+  BLOB_SERVICE
+  COMMS_SERVICE
+  GATEWAY
+  SUPER_SERVICE
+  USER_SERVICE
+}
+
+"""status response"""
+type HealthResponse {
+  service: GraphqlServicesEnum!
+  status: String!
+}
+
+type Query {
+  getHealth: HealthResponse!
+}
